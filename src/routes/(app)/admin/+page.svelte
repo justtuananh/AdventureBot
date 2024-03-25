@@ -63,7 +63,7 @@
 
 <svelte:head>
 	<title>
-		{`Admin Panel | ${$WEBUI_NAME}`}
+		{`Quản lí tài khoản | ${$WEBUI_NAME}`}
 	</title>
 </svelte:head>
 
@@ -88,7 +88,7 @@
 					<div class=" flex flex-col justify-center">
 						<div class=" flex justify-between items-center">
 							<div class="flex items-center text-2xl font-semibold">
-								All Users
+								Tất cả người dùng
 								<div class="flex self-center w-[1px] h-6 mx-2.5 bg-gray-200 dark:bg-gray-700" />
 								<span class="text-lg font-medium text-gray-500 dark:text-gray-300"
 									>{users.length}</span
@@ -115,12 +115,12 @@
 										/>
 									</svg>
 
-									<div class=" text-xs">Admin Settings</div>
+									<div class=" text-xs">Cài đặt admin</div>
 								</button>
 							</div>
 						</div>
 						<div class=" text-gray-500 text-xs mt-1">
-							ⓘ Click on the user role button to change a user's role.
+							ⓘ Bấm vào nút quyền ở người dùng để thay đổi quyền.
 						</div>
 
 						<hr class=" my-3 dark:border-gray-600" />
@@ -131,10 +131,10 @@
 									class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
 								>
 									<tr>
-										<th scope="col" class="px-3 py-2"> Role </th>
-										<th scope="col" class="px-3 py-2"> Name </th>
+										<th scope="col" class="px-3 py-2"> Quyền </th>
+										<th scope="col" class="px-3 py-2"> Tên<nav></nav> </th>
 										<th scope="col" class="px-3 py-2"> Email </th>
-										<th scope="col" class="px-3 py-2"> Action </th>
+										<th scope="col" class="px-3 py-2"> Trạng thái </th>
 									</tr>
 								</thead>
 								<tbody>

@@ -43,10 +43,10 @@
 >
 	<div class=" space-y-3 pr-1.5 overflow-y-scroll max-h-80">
 		<div>
-			<div class=" mb-2 text-sm font-medium">General Settings</div>
+			<div class=" mb-2 text-sm font-medium">Cài đặt tổng quan</div>
 
 			<div class="  flex w-full justify-between">
-				<div class=" self-center text-xs font-medium">Enable New Sign Ups</div>
+				<div class=" self-center text-xs font-medium">Cho phép đăng kí mới</div>
 
 				<button
 					class="p-1 px-3 text-xs flex rounded transition"
@@ -66,7 +66,7 @@
 								d="M11.5 1A3.5 3.5 0 0 0 8 4.5V7H2.5A1.5 1.5 0 0 0 1 8.5v5A1.5 1.5 0 0 0 2.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 9.5 7V4.5a2 2 0 1 1 4 0v1.75a.75.75 0 0 0 1.5 0V4.5A3.5 3.5 0 0 0 11.5 1Z"
 							/>
 						</svg>
-						<span class="ml-2 self-center">Enabled</span>
+						<span class="ml-2 self-center">Đã kích hoạt</span>
 					{:else}
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@
 							/>
 						</svg>
 
-						<span class="ml-2 self-center">Disabled</span>
+						<span class="ml-2 self-center">Chưa kích hoạt</span>
 					{/if}
 				</button>
 			</div>
@@ -97,8 +97,8 @@
 							updateDefaultUserRoleHandler(e.target.value);
 						}}
 					>
-						<option value="pending">Pending</option>
-						<option value="user">User</option>
+						<option value="pending">Đang đợi</option>
+						<option value="user">Người dùng</option>
 						<option value="admin">Admin</option>
 					</select>
 				</div>
@@ -108,7 +108,7 @@
 
 			<div class=" w-full justify-between">
 				<div class="flex w-full justify-between">
-					<div class=" self-center text-xs font-medium">JWT Expiration</div>
+					<div class=" self-center text-xs font-medium">Thời gian hết hạn JWT</div>
 				</div>
 
 				<div class="flex mt-2 space-x-2">
@@ -122,7 +122,7 @@
 
 				<div class="mt-2 text-xs text-gray-400 dark:text-gray-500">
 					Valid time units: <span class=" text-gray-300 font-medium"
-						>'s', 'm', 'h', 'd', 'w' or '-1' for no expiration.</span
+						>'s', 'm', 'h', 'd', 'w' or '-1' để tồn tại vĩnh viễn.</span
 					>
 				</div>
 			</div>
@@ -134,7 +134,7 @@
 			class=" px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-gray-100 transition rounded"
 			type="submit"
 		>
-			Save
+			Lưu
 		</button>
 	</div>
 </form>

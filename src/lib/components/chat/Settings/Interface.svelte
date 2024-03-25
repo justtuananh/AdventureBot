@@ -95,11 +95,11 @@
 >
 	<div class=" space-y-3 pr-1.5 overflow-y-scroll h-80">
 		<div>
-			<div class=" mb-1 text-sm font-medium">WebUI Add-ons</div>
+			<div class=" mb-1 text-sm font-medium">Thiết lập giao diện</div>
 
 			<div>
 				<div class=" py-0.5 flex w-full justify-between">
-					<div class=" self-center text-xs font-medium">Title Auto-Generation</div>
+					<div class=" self-center text-xs font-medium">Tự động tạo tiêu đề</div>
 
 					<button
 						class="p-1 px-3 text-xs flex rounded transition"
@@ -119,7 +119,7 @@
 
 			<div>
 				<div class=" py-0.5 flex w-full justify-between">
-					<div class=" self-center text-xs font-medium">Response AutoCopy to Clipboard</div>
+					<div class=" self-center text-xs font-medium">Tự động sao chép phản hồi</div>
 
 					<button
 						class="p-1 px-3 text-xs flex rounded transition"
@@ -139,7 +139,7 @@
 
 			<div>
 				<div class=" py-0.5 flex w-full justify-between">
-					<div class=" self-center text-xs font-medium">Full Screen Mode</div>
+					<div class=" self-center text-xs font-medium">Toàn màn hình</div>
 
 					<button
 						class="p-1 px-3 text-xs flex rounded transition"
@@ -160,7 +160,7 @@
 			<div>
 				<div class=" py-0.5 flex w-full justify-between">
 					<div class=" self-center text-xs font-medium">
-						Display the username instead of "You" in the Chat
+						HIển thị tên người dùng
 					</div>
 
 					<button
@@ -183,7 +183,7 @@
 		<hr class=" dark:border-gray-700" />
 
 		<div>
-			<div class=" mb-2.5 text-sm font-medium">Set Title Auto-Generation Model</div>
+			<div class=" mb-2.5 text-sm font-medium">Cài đặt mô hình thiết lập tiêu đề</div>
 			<div class="flex w-full">
 				<div class="flex-1 mr-2">
 					<select
@@ -203,7 +203,7 @@
 				</div>
 			</div>
 			<div class="mt-3 mr-2">
-				<div class=" mb-2.5 text-sm font-medium">Title Generation Prompt</div>
+				<div class=" mb-2.5 text-sm font-medium">Lời nhắc tạo tiêu đề</div>
 				<textarea
 					bind:value={titleGenerationPrompt}
 					class="w-full rounded-lg p-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
@@ -217,7 +217,7 @@
 
 			<div class=" space-y-3 pr-1.5 overflow-y-scroll max-h-80">
 				<div class="flex w-full justify-between mb-2">
-					<div class=" self-center text-sm font-semibold">Default Prompt Suggestions</div>
+					<div class=" self-center text-sm font-semibold">Đề xuất lời nhắc mặc định</div>
 
 					<button
 						class="p-1 px-3 text-xs flex rounded transition"
@@ -290,7 +290,7 @@
 
 				{#if promptSuggestions.length > 0}
 					<div class="text-xs text-left w-full mt-2">
-						Adjusting these settings will apply changes universally to all users.
+						Việc điều chỉnh các cài đặt này sẽ áp dụng các thay đổi chung cho tất cả người dùng.
 					</div>
 				{/if}
 			</div>

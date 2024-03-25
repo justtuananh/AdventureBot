@@ -42,7 +42,7 @@
 <Modal size="sm" bind:show>
 	<div>
 		<div class=" flex justify-between dark:text-gray-300 px-5 py-4">
-			<div class=" text-lg font-medium self-center">Edit User</div>
+			<div class=" text-lg font-medium self-center">Sửa thông tin</div>
 			<button
 				class="self-center"
 				on:click={() => {
@@ -108,7 +108,7 @@
 						</div>
 
 						<div class="flex flex-col w-full">
-							<div class=" mb-1 text-xs text-gray-500">Name</div>
+							<div class=" mb-1 text-xs text-gray-500">Tên</div>
 
 							<div class="flex-1">
 								<input
@@ -122,7 +122,7 @@
 						</div>
 
 						<div class="flex flex-col w-full">
-							<div class=" mb-1 text-xs text-gray-500">New Password</div>
+							<div class=" mb-1 text-xs text-gray-500">Mật khẩu mởi</div>
 
 							<div class="flex-1">
 								<input
@@ -140,7 +140,7 @@
 							class=" px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-gray-100 transition rounded"
 							type="submit"
 						>
-							Save
+							Lưu
 						</button>
 					</div>
 				</form>

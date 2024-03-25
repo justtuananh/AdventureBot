@@ -462,7 +462,7 @@
 	<div class=" space-y-3 pr-1.5 overflow-y-scroll h-[23rem]">
 		{#if ollamaVersion}
 			<div class="space-y-2 pr-1.5">
-				<div class="text-sm font-medium">Manage Ollama Models</div>
+				<div class="text-sm font-medium">Quản lí mô hình</div>
 
 				{#if OLLAMA_URLS.length > 0}
 					<div class="flex gap-2">
@@ -513,7 +513,7 @@
 
 				<div class="space-y-2">
 					<div>
-						<div class=" mb-2 text-sm font-medium">Pull a model from Ollama.com</div>
+						<div class=" mb-2 text-sm font-medium">Tải mô hình từ Ollama</div>
 						<div class="flex w-full">
 							<div class="flex-1 mr-2">
 								<input
@@ -575,10 +575,10 @@
 
 						<div>
 							<div class="mt-2 mb-1 text-xs text-gray-400 dark:text-gray-500">
-								To access the available model names for downloading, <a
+								Tìm kiếm các mô hình mã nguồn mở trên Ollama, <a
 									class=" text-gray-500 dark:text-gray-300 font-medium underline"
 									href="https://ollama.com/library"
-									target="_blank">click here.</a
+									target="_blank">bấm vào đây.</a
 								>
 							</div>
 						</div>
@@ -604,7 +604,7 @@
 					</div>
 
 					<div>
-						<div class=" mb-2 text-sm font-medium">Delete a model</div>
+						<div class=" mb-2 text-sm font-medium">Xóa mô hình</div>
 						<div class="flex w-full">
 							<div class="flex-1 mr-2">
 								<select
@@ -613,7 +613,7 @@
 									placeholder="Select a model"
 								>
 									{#if !deleteModelTag}
-										<option value="" disabled selected>Select a model</option>
+										<option value="" disabled selected>Chọn một mô hình</option>
 									{/if}
 									{#each $models.filter((m) => m.size != null && (selectedOllamaUrlIdx === null ? true : (m?.urls ?? []).includes(selectedOllamaUrlIdx))) as model}
 										<option value={model.name} class="bg-gray-100 dark:bg-gray-700"
@@ -644,18 +644,7 @@
 						</div>
 					</div>
 
-					<div class="pt-1">
-						<div class="flex justify-between items-center text-xs">
-							<div class=" text-sm font-medium">Experimental</div>
-							<button
-								class=" text-xs font-medium text-gray-500"
-								type="button"
-								on:click={() => {
-									showExperimentalOllama = !showExperimentalOllama;
-								}}>{showExperimentalOllama ? 'Hide' : 'Show'}</button
-							>
-						</div>
-					</div>
+
 
 					{#if showExperimentalOllama}
 						<form
@@ -827,196 +816,5 @@
 			<hr class=" dark:border-gray-700 my-2" />
 		{/if}
 
-		<div class=" space-y-3">
-			<div class="mt-2 space-y-3 pr-1.5">
-				<div>
-					<div class="mb-2">
-						<div class="flex justify-between items-center text-xs">
-							<div class=" text-sm font-medium">Manage LiteLLM Models</div>
-							<button
-								class=" text-xs font-medium text-gray-500"
-								type="button"
-								on:click={() => {
-									showLiteLLM = !showLiteLLM;
-								}}>{showLiteLLM ? 'Hide' : 'Show'}</button
-							>
-						</div>
-					</div>
-
-					{#if showLiteLLM}
-						<div>
-							<div class="flex justify-between items-center text-xs">
-								<div class=" text-sm font-medium">Add a model</div>
-								<button
-									class=" text-xs font-medium text-gray-500"
-									type="button"
-									on:click={() => {
-										showLiteLLMParams = !showLiteLLMParams;
-									}}
-									>{showLiteLLMParams ? 'Hide Additional Params' : 'Show Additional Params'}</button
-								>
-							</div>
-						</div>
-
-						<div class="my-2 space-y-2">
-							<div class="flex w-full mb-1.5">
-								<div class="flex-1 mr-2">
-									<input
-										class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
-										placeholder="Enter LiteLLM Model (litellm_params.model)"
-										bind:value={liteLLMModel}
-										autocomplete="off"
-									/>
-								</div>
-
-								<button
-									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded-lg transition"
-									on:click={() => {
-										addLiteLLMModelHandler();
-									}}
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 16 16"
-										fill="currentColor"
-										class="w-4 h-4"
-									>
-										<path
-											d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"
-										/>
-									</svg>
-								</button>
-							</div>
-
-							{#if showLiteLLMParams}
-								<div>
-									<div class=" mb-1.5 text-sm font-medium">Model Name</div>
-									<div class="flex w-full">
-										<div class="flex-1">
-											<input
-												class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
-												placeholder="Enter Model Name (model_name)"
-												bind:value={liteLLMModelName}
-												autocomplete="off"
-											/>
-										</div>
-									</div>
-								</div>
-
-								<div>
-									<div class=" mb-1.5 text-sm font-medium">API Base URL</div>
-									<div class="flex w-full">
-										<div class="flex-1">
-											<input
-												class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
-												placeholder="Enter LiteLLM API Base URL (litellm_params.api_base)"
-												bind:value={liteLLMAPIBase}
-												autocomplete="off"
-											/>
-										</div>
-									</div>
-								</div>
-
-								<div>
-									<div class=" mb-1.5 text-sm font-medium">API Key</div>
-									<div class="flex w-full">
-										<div class="flex-1">
-											<input
-												class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
-												placeholder="Enter LiteLLM API Key (litellm_params.api_key)"
-												bind:value={liteLLMAPIKey}
-												autocomplete="off"
-											/>
-										</div>
-									</div>
-								</div>
-
-								<div>
-									<div class="mb-1.5 text-sm font-medium">API RPM</div>
-									<div class="flex w-full">
-										<div class="flex-1">
-											<input
-												class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
-												placeholder="Enter LiteLLM API RPM (litellm_params.rpm)"
-												bind:value={liteLLMRPM}
-												autocomplete="off"
-											/>
-										</div>
-									</div>
-								</div>
-
-								<div>
-									<div class="mb-1.5 text-sm font-medium">Max Tokens</div>
-									<div class="flex w-full">
-										<div class="flex-1">
-											<input
-												class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
-												placeholder="Enter Max Tokens (litellm_params.max_tokens)"
-												bind:value={liteLLMMaxTokens}
-												type="number"
-												min="1"
-												autocomplete="off"
-											/>
-										</div>
-									</div>
-								</div>
-							{/if}
-						</div>
-
-						<div class="mb-2 text-xs text-gray-400 dark:text-gray-500">
-							Not sure what to add?
-							<a
-								class=" text-gray-300 font-medium underline"
-								href="https://litellm.vercel.app/docs/proxy/configs#quick-start"
-								target="_blank"
-							>
-								Click here for help.
-							</a>
-						</div>
-
-						<div>
-							<div class=" mb-2.5 text-sm font-medium">Delete a model</div>
-							<div class="flex w-full">
-								<div class="flex-1 mr-2">
-									<select
-										class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
-										bind:value={deleteLiteLLMModelId}
-										placeholder="Select a model"
-									>
-										{#if !deleteLiteLLMModelId}
-											<option value="" disabled selected>Select a model</option>
-										{/if}
-										{#each liteLLMModelInfo as model}
-											<option value={model.model_info.id} class="bg-gray-100 dark:bg-gray-700"
-												>{model.model_name}</option
-											>
-										{/each}
-									</select>
-								</div>
-								<button
-									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded-lg transition"
-									on:click={() => {
-										deleteLiteLLMModelHandler();
-									}}
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 16 16"
-										fill="currentColor"
-										class="w-4 h-4"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M5 3.25V4H2.75a.75.75 0 0 0 0 1.5h.3l.815 8.15A1.5 1.5 0 0 0 5.357 15h5.285a1.5 1.5 0 0 0 1.493-1.35l.815-8.15h.3a.75.75 0 0 0 0-1.5H11v-.75A2.25 2.25 0 0 0 8.75 1h-1.5A2.25 2.25 0 0 0 5 3.25Zm2.25-.75a.75.75 0 0 0-.75.75V4h3v-.75a.75.75 0 0 0-.75-.75h-1.5ZM6.05 6a.75.75 0 0 1 .787.713l.275 5.5a.75.75 0 0 1-1.498.075l-.275-5.5A.75.75 0 0 1 6.05 6Zm3.9 0a.75.75 0 0 1 .712.787l-.275 5.5a.75.75 0 0 1-1.498-.075l.275-5.5a.75.75 0 0 1 .786-.711Z"
-											clip-rule="evenodd"
-										/>
-									</svg>
-								</button>
-							</div>
-						</div>
-					{/if}
-				</div>
-			</div>
-		</div>
 	</div>
 </div>

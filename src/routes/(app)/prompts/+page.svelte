@@ -46,7 +46,7 @@
 	<div class="flex flex-col justify-between w-full overflow-y-auto">
 		<div class="max-w-2xl mx-auto w-full px-3 md:px-0 my-10">
 			<div class="mb-6 flex justify-between items-center">
-				<div class=" text-2xl font-semibold self-center">My Prompts</div>
+				<div class=" text-2xl font-semibold self-center">Lời nhắc của tôi</div>
 			</div>
 
 			<div class=" flex w-full space-x-2">
@@ -68,7 +68,7 @@
 					<input
 						class=" w-full text-sm pr-4 py-1 rounded-r-xl outline-none bg-transparent"
 						bind:value={query}
-						placeholder="Search Prompt"
+						placeholder="Tìm kiếm lời nhắc"
 					/>
 				</div>
 
@@ -246,7 +246,7 @@
 							promptsImportInputElement.click();
 						}}
 					>
-						<div class=" self-center mr-2 font-medium">Import Prompts</div>
+						<div class=" self-center mr-2 font-medium">Load lời nhắc</div>
 
 						<div class=" self-center">
 							<svg
@@ -274,7 +274,7 @@
 							saveAs(blob, `prompts-export-${Date.now()}.json`);
 						}}
 					>
-						<div class=" self-center mr-2 font-medium">Export Prompts</div>
+						<div class=" self-center mr-2 font-medium">Xuất lời nhắc</div>
 
 						<div class=" self-center">
 							<svg
@@ -302,39 +302,7 @@
 				</div>
 			</div>
 
-			<div class=" my-16">
-				<div class=" text-2xl font-semibold mb-3">Made by OpenWebUI Community</div>
 
-				<a
-					class=" flex space-x-4 cursor-pointer w-full mb-3 px-3 py-2"
-					href="https://openwebui.com/?type=prompts"
-					target="_blank"
-				>
-					<div class=" self-center w-10">
-						<div
-							class="w-full h-10 flex justify-center rounded-full bg-transparent dark:bg-gray-700 border border-dashed border-gray-200"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								class="w-6"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-						</div>
-					</div>
-
-					<div class=" self-center">
-						<div class=" font-bold">Discover a prompt</div>
-						<div class=" text-sm">Discover, download, and explore custom prompts</div>
-					</div>
-				</a>
-			</div>
 		</div>
 	</div>
 </div>

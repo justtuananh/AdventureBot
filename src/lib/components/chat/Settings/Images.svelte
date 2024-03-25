@@ -257,7 +257,7 @@
 							placeholder="Select a model"
 						>
 							{#if !selectedModel}
-								<option value="" disabled selected>Select a model</option>
+								<option value="" disabled selected>Chọn một mô hình</option>
 							{/if}
 							{#each models ?? [] as model}
 								<option value={model.id} class="bg-gray-100 dark:bg-gray-700">{model.name}</option>

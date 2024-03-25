@@ -101,7 +101,7 @@
 			}}
 		/>
 
-		<div class=" mb-2.5 text-sm font-medium">Profile</div>
+		<div class=" mb-2.5 text-sm font-medium">Hồ sơ</div>
 
 		<div class="flex space-x-5">
 			<div class="flex flex-col">
@@ -143,13 +143,13 @@
 						const url = await getGravatarUrl($user.email);
 
 						profileImageUrl = url;
-					}}>Use Gravatar</button
+					}}>Xóa avatar</button
 				>
 			</div>
 
 			<div class="flex-1">
 				<div class="flex flex-col w-full">
-					<div class=" mb-1 text-xs text-gray-500">Name</div>
+					<div class=" mb-1 text-xs text-gray-500">Tên</div>
 
 					<div class="flex-1">
 						<input
@@ -280,7 +280,7 @@
 				}
 			}}
 		>
-			Save
+			Lưu
 		</button>
 	</div>
 </div>

@@ -32,7 +32,7 @@
 			<div class=" flex flex-col w-full sm:flex-row sm:justify-center sm:space-x-6">
 				<div class="flex flex-col space-y-3 w-full self-start">
 					<div class="w-full flex justify-between items-center">
-						<div class=" text-sm">Open new chat</div>
+						<div class=" text-sm">Mở cuộc trò chuyện mới</div>
 
 						<div class="flex space-x-1 text-xs">
 							<div

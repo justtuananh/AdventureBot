@@ -9,6 +9,9 @@ from fastapi import (
     File,
     Form,
 )
+
+import requests
+url = "https://asr.hpda.vn/stt"
 from fastapi.middleware.cors import CORSMiddleware
 from faster_whisper import WhisperModel
 
@@ -39,7 +42,7 @@ def transcribe(
     user=Depends(get_current_user),
 ):
     print(file.content_type)
-
+    print(file)
     if file.content_type not in ["audio/mpeg", "audio/wav"]:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -61,15 +64,22 @@ def transcribe(
             download_root=WHISPER_MODEL_DIR,
         )
 
-        segments, info = model.transcribe(file_path, beam_size=5)
-        print(
-            "Detected language '%s' with probability %f"
-            % (info.language, info.language_probability)
-        )
+        _, info = model.transcribe(file_path, beam_size=1)
+        # print(
+        #     "Detected language '%s' with probability %f"
+        #     % (info.language, info.language_probability)
+        # )
+        print(info.language)
+        files = {'file': open(file_path, 'rb')}
+        if info.language == "en" :
+            response = requests.post(url, files=files, data = {'language': "English"})
+        else :
+            response = requests.post(url, files=files, data={'language' : "Vietnamese"})
 
-        transcript = "".join([segment.text for segment in list(segments)])
+        os.remove(file_path)
+        #transcript = "".join([segment.text for segment in list(segments)])
 
-        return {"text": transcript.strip()}
+        return response.json()
 
     except Exception as e:
         print(e)

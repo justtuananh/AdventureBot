@@ -39,7 +39,7 @@
 				bind:value={selectedModel}
 				{disabled}
 			>
-				<option class=" text-gray-700" value="" selected disabled>Select a model</option>
+				<option class=" text-gray-700" value="" selected disabled>Chọn một mô hình</option>
 
 				{#each $models as model}
 					{#if model.name === 'hr'}
@@ -133,5 +133,5 @@
 </div>
 
 <div class="text-left mt-1.5 text-xs text-gray-500">
-	<button on:click={saveDefaultModel}> Set as default</button>
+	<button on:click={saveDefaultModel}> Đặt làm mặc định</button>
 </div>

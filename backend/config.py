@@ -23,7 +23,7 @@ try:
 except ImportError:
     print("dotenv not installed, skipping...")
 
-WEBUI_NAME = "Open WebUI"
+WEBUI_NAME = "Adventure Bot"
 shutil.copyfile("../build/favicon.png", "./static/favicon.png")
 
 ####################################
@@ -220,6 +220,7 @@ if OLLAMA_BASE_URL == "" and OLLAMA_API_BASE_URL != "":
 if ENV == "prod":
     if OLLAMA_BASE_URL == "/ollama":
         OLLAMA_BASE_URL = "http://host.docker.internal:11434"
+        
 
 
 OLLAMA_BASE_URLS = os.environ.get("OLLAMA_BASE_URLS", "")
@@ -328,7 +329,7 @@ if WEBUI_AUTH and WEBUI_SECRET_KEY == "":
 
 CHROMA_DATA_PATH = f"{DATA_DIR}/vector_db"
 # this uses the model defined in the Dockerfile ENV variable. If you dont use docker or docker based deployments such as k8s, the default embedding model will be used (all-MiniLM-L6-v2)
-RAG_EMBEDDING_MODEL = os.environ.get("RAG_EMBEDDING_MODEL", "all-MiniLM-L6-v2")
+RAG_EMBEDDING_MODEL = os.environ.get("RAG_EMBEDDING_MODEL", "bkai-foundation-models/vietnamese-bi-encoder")
 # device type ebbeding models - "cpu" (default), "cuda" (nvidia gpu required) or "mps" (apple silicon) - choosing this right can lead to better performance
 RAG_EMBEDDING_MODEL_DEVICE_TYPE = os.environ.get(
     "RAG_EMBEDDING_MODEL_DEVICE_TYPE", "cpu"
@@ -359,7 +360,7 @@ Query: [query]"""
 # Transcribe
 ####################################
 
-WHISPER_MODEL = os.getenv("WHISPER_MODEL", "base")
+WHISPER_MODEL = os.getenv("WHISPER_MODEL", "tiny")
 WHISPER_MODEL_DIR = os.getenv("WHISPER_MODEL_DIR", f"{CACHE_DIR}/whisper/models")
 
 

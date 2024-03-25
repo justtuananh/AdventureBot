@@ -318,7 +318,7 @@
 							class="outline-none bg-transparent text-sm font-medium rounded-lg w-full placeholder-gray-400"
 							bind:value={selectedModelId}
 						>
-							<option class=" text-gray-800" value="" selected disabled>Select a model</option>
+							<option class=" text-gray-800" value="" selected disabled>Chọn một mô hình</option>
 
 							{#each $models as model}
 								{#if model.name === 'hr'}

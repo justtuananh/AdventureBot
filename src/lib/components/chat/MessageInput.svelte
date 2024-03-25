@@ -664,8 +664,8 @@
 							placeholder={chatInputPlaceholder !== ''
 								? chatInputPlaceholder
 								: isRecording
-								? 'Listening...'
-								: 'Send a message'}
+								? 'Đang nghe...'
+								: 'Gửi một tin nhắn'}
 							bind:value={prompt}
 							on:keypress={(e) => {
 								if (e.keyCode == 13 && !e.shiftKey) {
@@ -804,7 +804,7 @@
 
 						<div class="self-end mb-2 flex space-x-1 mr-1">
 							{#if messages.length == 0 || messages.at(-1).done == true}
-								<Tooltip content="Record voice">
+								<Tooltip content="Ghi âm giọng nói">
 									{#if speechRecognitionEnabled}
 										<button
 											id="voice-input-button"
@@ -873,7 +873,7 @@
 									{/if}
 								</Tooltip>
 
-								<Tooltip content="Send message">
+								<Tooltip content="Gửi">
 									<button
 										class="{prompt !== ''
 											? 'bg-black text-white hover:bg-gray-900 dark:bg-white dark:text-black dark:hover:bg-gray-100 '
@@ -919,7 +919,7 @@
 				</form>
 
 				<div class="mt-1.5 text-xs text-gray-500 text-center">
-					LLMs can make mistakes. Verify important information.
+					LLMs có thể đưa ra phản hồi sai lệch, vui lòng lưu ý đến điều đó.
 				</div>
 			</div>
 		</div>

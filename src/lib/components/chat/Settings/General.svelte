@@ -86,10 +86,10 @@
 <div class="flex flex-col h-full justify-between text-sm">
 	<div class="  pr-1.5 overflow-y-scroll max-h-[20.5rem]">
 		<div class="">
-			<div class=" mb-1 text-sm font-medium">WebUI Settings</div>
+			<div class=" mb-1 text-sm font-medium">Cài đặt giao diện</div>
 
 			<div class=" py-0.5 flex w-full justify-between">
-				<div class=" self-center text-xs font-medium">Theme</div>
+				<div class=" self-center text-xs font-medium">Nền</div>
 				<div class="flex items-center relative">
 					<div class=" absolute right-16">
 						{#if theme === 'dark'}
@@ -141,8 +141,8 @@
 							console.log(theme);
 						}}
 					>
-						<option value="dark">Dark</option>
-						<option value="light">Light</option>
+						<option value="dark">Đen</option>
+						<option value="light">Trắng</option>
 						<option value="rose-pine dark">Rosé Pine</option>
 						<option value="rose-pine-dawn light">Rosé Pine Dawn</option>
 					</select>
@@ -151,7 +151,7 @@
 
 			<div>
 				<div class=" py-0.5 flex w-full justify-between">
-					<div class=" self-center text-xs font-medium">Notification</div>
+					<div class=" self-center text-xs font-medium">Chú ý</div>
 
 					<button
 						class="p-1 px-3 text-xs flex rounded transition"
@@ -161,9 +161,9 @@
 						type="button"
 					>
 						{#if notificationEnabled === true}
-							<span class="ml-2 self-center">On</span>
+							<span class="ml-2 self-center">Bật</span>
 						{:else}
-							<span class="ml-2 self-center">Off</span>
+							<span class="ml-2 self-center">Tắt</span>
 						{/if}
 					</button>
 				</div>
@@ -173,7 +173,7 @@
 		<hr class=" dark:border-gray-700 my-3" />
 
 		<div>
-			<div class=" my-2.5 text-sm font-medium">System Prompt</div>
+			<div class=" my-2.5 text-sm font-medium">Lời nhắc hệ thống</div>
 			<textarea
 				bind:value={system}
 				class="w-full rounded-lg p-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
@@ -183,7 +183,7 @@
 
 		<div class="mt-2 space-y-3 pr-1.5">
 			<div class="flex justify-between items-center text-sm">
-				<div class="  font-medium">Advanced Parameters</div>
+				<div class="  font-medium">Tham số nâng cao</div>
 				<button
 					class=" text-xs font-medium text-gray-500"
 					type="button"

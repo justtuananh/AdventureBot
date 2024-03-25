@@ -128,7 +128,7 @@
 						/>
 					</div>
 
-					<div class=" self-center font-medium text-sm">New Chat</div>
+					<div class=" self-center font-medium text-sm">Cuộc trò chuyện mới</div>
 				</div>
 
 				<div class="self-center">
@@ -201,7 +201,7 @@
 					</div>
 
 					<div class="flex self-center">
-						<div class=" self-center font-medium text-sm">Prompts</div>
+						<div class=" self-center font-medium text-sm">Lời nhắc</div>
 					</div>
 				</a>
 			</div>
@@ -229,7 +229,7 @@
 					</div>
 
 					<div class="flex self-center">
-						<div class=" self-center font-medium text-sm">Documents</div>
+						<div class=" self-center font-medium text-sm">Tài liệu</div>
 					</div>
 				</a>
 			</div>
@@ -239,7 +239,7 @@
 			{#if !($settings.saveChatHistory ?? true)}
 				<div class="absolute z-40 w-full h-full bg-black/90 flex justify-center">
 					<div class=" text-left px-5 py-2">
-						<div class=" font-medium">Chat History is off for this browser.</div>
+						<div class=" font-medium">Lịch sử chat bị tắt trên trình duyệt này.</div>
 						<div class="text-xs mt-2">
 							When history is turned off, new chats on this browser won't appear in your history on
 							any of your devices. <span class=" font-semibold"
@@ -296,7 +296,7 @@
 
 					<input
 						class="w-full rounded-r-xl py-1.5 pl-2.5 pr-4 text-sm text-gray-300 bg-gray-950 outline-none"
-						placeholder="Search"
+						placeholder="Tìm kiếm"
 						bind:value={search}
 						on:focus={() => {
 							enrichChatsWithContent($chats);
@@ -602,7 +602,7 @@
 												/>
 											</svg>
 										</div>
-										<div class=" self-center font-medium">Admin Panel</div>
+										<div class=" self-center font-medium">Quản lí tài khoản</div>
 									</button>
 
 									<button

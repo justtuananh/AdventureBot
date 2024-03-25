@@ -81,7 +81,7 @@
 <div class="min-h-screen max-h-[100dvh] w-full flex justify-center dark:text-white">
 	<div class="flex flex-col justify-between w-full overflow-y-auto">
 		<div class="max-w-2xl mx-auto w-full px-3 md:px-0 my-10">
-			<div class=" text-2xl font-semibold mb-3">My Modelfiles</div>
+			<div class=" text-2xl font-semibold mb-3">ModelFiles của tôi</div>
 
 			<a class=" flex space-x-4 cursor-pointer w-full mb-2 px-3 py-2" href="/modelfiles/create">
 				<div class=" self-center w-10">
@@ -104,8 +104,8 @@
 				</div>
 
 				<div class=" self-center">
-					<div class=" font-bold">Create a modelfile</div>
-					<div class=" text-sm">Customize Ollama models for a specific purpose</div>
+					<div class=" font-bold">Tạo một modelfile</div>
+					<div class=" text-sm">Tùy chỉnh mô hình cho một mục đích cụ thể</div>
 				</div>
 			</a>
 
@@ -270,7 +270,7 @@
 							modelfilesImportInputElement.click();
 						}}
 					>
-						<div class=" self-center mr-2 font-medium">Import Modelfiles</div>
+						<div class=" self-center mr-2 font-medium">Load Modelfile</div>
 
 						<div class=" self-center">
 							<svg
@@ -294,7 +294,7 @@
 							saveModelfiles($modelfiles);
 						}}
 					>
-						<div class=" self-center mr-2 font-medium">Export Modelfiles</div>
+						<div class=" self-center mr-2 font-medium">Xuất Modelfiles</div>
 
 						<div class=" self-center">
 							<svg
@@ -385,39 +385,6 @@
 				{/if}
 			</div>
 
-			<div class=" my-16">
-				<div class=" text-2xl font-semibold mb-3">Made by OpenWebUI Community</div>
-
-				<a
-					class=" flex space-x-4 cursor-pointer w-full mb-2 px-3 py-2"
-					href="https://openwebui.com/"
-					target="_blank"
-				>
-					<div class=" self-center w-10">
-						<div
-							class="w-full h-10 flex justify-center rounded-full bg-transparent dark:bg-gray-700 border border-dashed border-gray-200"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="currentColor"
-								class="w-6"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-						</div>
-					</div>
-
-					<div class=" self-center">
-						<div class=" font-bold">Discover a modelfile</div>
-						<div class=" text-sm">Discover, download, and explore model presets</div>
-					</div>
-				</a>
-			</div>
 		</div>
 	</div>
 </div>
